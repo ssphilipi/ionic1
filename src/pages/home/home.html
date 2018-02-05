@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <button (click)="getPokemon()" ion-button>Get Novo Pokemon</button>
+
+  <!-- <ion-list>
+  <ion-item *ngIf='pokemon'>
+    <ion-avatar item-start>
+      <img src="{{ pokemon.sprites.front_default }}">
+    </ion-avatar>
+    <h2>{{ pokemon.name }}</h2>
+    <p>I hate mondays... Lasagna</p>
+  </ion-item>
+  </ion-list> -->
+
+  <!-- <li *ngFor="let pk of pokemon"> -->
+    <ion-item *ngFor="let pk of pokemon">
+      <ion-card>
+        <img src="{{ pk.sprites.front_default }}">
+        <ion-card-content>
+          <ion-card-title>
+            {{ pk.name }}
+            </ion-card-title>
+          <p>
+            I hate mondays... Lasagna
+          </p>
+        </ion-card-content>
+      </ion-card>
+    </ion-item>
+  <!-- </li> -->
+
+</ion-content>
